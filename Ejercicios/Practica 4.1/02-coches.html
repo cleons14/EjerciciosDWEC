@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coches</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Año de Matriculación</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                class Coche {
+                    constructor(marca, modelo, precio, anoMatriculacion, url) {
+                        this.marca = marca;
+                        this.modelo = modelo;
+                        this.precio = precio;
+                        this.anoMatriculacion = anoMatriculacion;
+                        this.url = url;
+                    }
+                }
+
+                const coche1 = new Coche("Toyota", "Corolla", 25000, 2022, "./img/Corolla.jpg");
+                const coche2 = new Coche("Honda", "Civic", 22000, 2022, "./img/Civic.jpg");
+                const coche3 = new Coche("Ford", "Mustang", 45000, 2021, "./img/Mustang.jpg");
+                const coche4 = new Coche("Volkswagen", "Golf", 28000, 2022, "./img/Golf.jpg");
+                const coche5 = new Coche("Chevrolet", "Camaro", 50000, 2021, "./img/Camaro.jpg");
+
+                const listaCoches = [coche1, coche2, coche3, coche4, coche5];
+
+                listaCoches.forEach(coche => {
+                    const row = document.createElement("tr");
+
+                    const marcaCell = document.createElement("td");
+                    marcaCell.textContent = coche.marca;
+                    row.appendChild(marcaCell);
+
+                    const modeloCell = document.createElement("td");
+                    modeloCell.textContent = coche.modelo;
+                    row.appendChild(modeloCell);
+
+                    const precioCell = document.createElement("td");
+                    precioCell.textContent = `${coche.precio} euros`;
+                    row.appendChild(precioCell);
+
+                    const anoMatriculacionCell = document.createElement("td");
+                    anoMatriculacionCell.textContent = coche.anoMatriculacion;
+                    row.appendChild(anoMatriculacionCell);
+
+                    const imagenCell = document.createElement("td");
+                    const imagen = document.createElement("img");
+                    imagen.src = coche.url;
+                    imagen.alt = `${coche.marca} ${coche.modelo}`;
+                    imagenCell.appendChild(imagen);
+                    row.appendChild(imagenCell);
+
+                    document.querySelector("tbody").appendChild(row);
+                });
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Personalizada</title>
+</head>
+<body>
+    <script>
+       
+       const nombre = prompt("Introduzca su nombre: ").trim();
+       const curso = prompt("Introduzca su curso:").trim();
+    const fechaInicio = prompt("Introduzca la fecha de inicio del curso (DD/MM): ").trim();
+    const fechaFin = prompt("Introduzca la fecha de finalización del curso (DD/MM): ").trim();
+
+const cartaPersonalizada = `
+Estimado ${nombre},
+
+Bienvenido al curso de ${curso} que se celebrará en la localidad de Toledo entre las fechas ${fechaInicio} y ${fechaFin}. Espero que el curso se desarrolle según sus expectativas. Estaremos encantados de atenderle.
+
+Atentamente,
+La dirección.
+`;
+
+
+document.write(cartaPersonalizada);
+
+    </script>
+</body>
+</html>

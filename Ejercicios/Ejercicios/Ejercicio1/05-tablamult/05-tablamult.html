@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Multiplicar</title>
+</head>
+<body>
+    <script>
+        const num = prompt("Introduzca un número:"); // Solicitar al usuario un número
+
+        // Validar si el usuario ingresó un número válido
+        if (!isNaN(num)) {
+            console.log(`Tabla de multiplicar del número ${num}:`);
+            for (let i = 1; i <= 10; i++) {
+                console.log(`${num} x ${i} = ${num * i}`); // Mostrar la tabla de multiplicar en la consola
+            }
+        } else {
+            console.error("Por favor, introduzca un número válido.");
+        }
+    </script>
+</body>
+</html>

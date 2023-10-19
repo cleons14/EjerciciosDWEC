@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Alumnos</title>
+</head>
+<body>
+
+<table id="tabla-alumnos" border="1">
+    <thead>
+        <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Población</th>
+            <th>Edad</th>
+            <th>Estudios</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    class Persona {
+        constructor(nombre, apellidos, poblacion, edad, estudios, carnetDeConducir) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.poblacion = poblacion;
+            this.edad = edad;
+            this.estudios = estudios;
+            this.carnetDeConducir = carnetDeConducir;
+        }
+
+        getEdad() {
+            return this.edad;
+        }
+
+        setEdad(edad) {
+            if (typeof edad === 'number' && edad >= 0) {
+                this.edad = edad;
+            } else {
+                alert('La edad debe ser un número válido.');
+            }
+        }
+
+        getEstudios() {
+            return this.estudios;
+        }
+
+        setEstudios(estudios) {
+            if (typeof estudios === 'string') {
+                this.estudios = estudios;
+            } else {
+                alert('Los estudios deben ser una cadena de texto.');
+            }
+        }
+    }
+
+    const mapaAlumnos = new Map();
+    mapaAlumnos.set('12345678A', new Persona('José', 'Perez', 'Madrid', 30, 'Licenciatura', true));
+    mapaAlumnos.set('23456789B', new Persona('María', 'Gomez', 'Barcelona', 25, 'Master', false));
+    mapaAlumnos.set('34567890C', new Persona('Carlos', 'Lopez', 'Ciudad Real', 18, 'Bachillerato', true));
+    mapaAlumnos.set('45678901D', new Persona('Francisca', 'Martinez', 'Sevilla', 28, 'Doctorado', false));
+
+    const mapaAlumnosOrdenadoPorClave = new Map([...mapaAlumnos.entries()].sort());
+
+    const mapaAlumnosArray = [...mapaAlumnos.entries()];
+    mapaAlumnosArray.sort((a, b) => a[1].edad - b[1].edad);
+    const mapaAlumnosOrdenadoPorEdad = new Map(mapaAlumnosArray);
+
+    const tablaAlumnos = document.getElementById('tabla-alumnos');
+    const tbody = tablaAlumnos.querySelector('tbody');
+    
+    function mostrarAlumnos(mapa) {
+        tbody.innerHTML = '';
+        mapa.forEach((alumno, dni) => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+                <td>${dni}</td>
+                <td>${alumno.nombre}</td>
+                <td>${alumno.apellidos}</td>
+                <td>${alumno.poblacion}</td>
+                <td>${alumno.edad}</td>
+                <td>${alumno.estudios}</td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
+
+    mostrarAlumnos(mapaAlumnosOrdenadoPorClave);
+</script>
+
+</body>
+</html>

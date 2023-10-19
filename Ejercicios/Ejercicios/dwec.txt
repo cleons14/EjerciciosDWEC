@@ -1,0 +1,18 @@
+Comandos basicos git:
+ - git init (crear el repositorio)
+ - git status (ver el estado del repositorio)
+ - git add . (Añadir ficheros)
+ - git commit (Llevar los ficheros preparados al repositorio)
+ - git log (registro de commits)
+ - git branch -m ramaAntigua ramaNueva(cambiar normbre rama)
+ - git checkout rama (cambiar de rama)
+ - git branch -d rama (borrar rama)
+ - git merge rama (pasar linea de una rama a otra)
+ - cd nombrecarpeta/ (entrar en una carpeta)
+ - cd .. (salir una carpeta) 
+ - mkdir nombrecarpeta (crear carpeta)
+
+--------------------
+|Contraseña Github |
+|aisjdbfiDFDF8383  |
+--------------------

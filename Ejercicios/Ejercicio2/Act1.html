@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase Persona</title>
+</head>
+<body>
+<script>
+    class Persona {
+        constructor(nombre, apellidos, poblacion, edad, estudios, carnetDeConducir) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.poblacion = poblacion;
+            this.edad = edad;
+            this.estudios = estudios;
+            this.carnetDeConducir = carnetDeConducir;
+        }
+
+        getEdad() {
+            return this.edad;
+        }
+
+        setEdad(edad) {
+            if (typeof edad === 'number' && edad >= 0) {
+                this.edad = edad;
+            } else {
+                alert('La edad debe ser un número válido.');
+            }
+        }
+
+        getEstudios() {
+            return this.estudios;
+        }
+
+        setEstudios(estudios) {
+            if (typeof estudios === 'string') {
+                this.estudios = estudios;
+            } else {
+                alert('Los estudios deben ser una cadena de texto.');
+            }
+        }
+    }
+
+    const persona1 = new Persona('Juan', 'Perez', 'Madrid', 30, 'Licenciatura', true);
+
+    persona1.setEdad('Treinta'); 
+    persona1.setEstudios(123);    
+
+    console.log('Nombre:', persona1.nombre);
+    console.log('Apellidos:', persona1.apellidos);
+    console.log('Población:', persona1.poblacion);
+    console.log('Edad:', persona1.getEdad());
+    console.log('Estudios:', persona1.getEstudios());
+    console.log('Carnet de conducir:', persona1.carnetDeConducir);
+</script>
+
+</body>
+</html>
