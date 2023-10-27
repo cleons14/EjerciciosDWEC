@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Alta de Cuenta</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Alta de Cuenta</h2>
+        <form id="altaCuentaForm" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+            </div>
+            <div class="form-group">
+                <label for="cuenta">Número de Cuenta o Tarjeta de Crédito:</label>
+                <input type="text" class="form-control" id="cuenta" required>
+                <div class="invalid-feedback">Por favor, ingrese su número de cuenta o tarjeta de crédito.</div>
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" class="form-control" id="usuario" required>
+                <div class="invalid-feedback">Por favor, ingrese su usuario.</div>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" required>
+                <div class="invalid-feedback">Por favor, ingrese su contraseña.</div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="aceptar" required>
+                <label class="form-check-label" for="aceptar">Acepto las condiciones</label>
+                <div class="invalid-feedback">Debe aceptar las condiciones para continuar.</div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="publicidad1">
+                <label class="form-check-label" for="publicidad1">Publicidad de Compañía 1</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="publicidad2">
+                <label class="form-check-label" for="publicidad2">Publicidad de Compañía 2</label>
+            </div>
+
+            <button type="button" id="selectAllBtn" class="btn btn-secondary">Seleccionar Todos</button>
+            <button type="button" id="deselectAllBtn" class="btn btn-secondary">Deseleccionar Todos</button>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <script src="validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Validación</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Validación</h2>
+        <form id="validacionForm">
+            <div class="form-group">
+                <label for="codigoPostal">Código Postal:</label>
+                <input type="text" class="form-control" id="codigoPostal">
+                <div class="error-message" id="codigoPostalError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="numeroEntero">Número Entero:</label>
+                <input type="text" class="form-control" id="numeroEntero">
+                <div class="error-message" id="numeroEnteroError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="numeroReal">Número Real:</label>
+                <input type="text" class="form-control" id="numeroReal">
+                <div class="error-message" id="numeroRealError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="text" class="form-control" id="telefono">
+                <div class="error-message" id="telefonoError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefonoInternacional">Número de Teléfono Internacional:</label>
+                <input type="text" class="form-control" id="telefonoInternacional">
+                <div class="error-message" id="telefonoInternacionalError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha (YYYY-MM-DD):</label>
+                <input type="text" class="form-control" id="fecha">
+                <div class="error-message" id="fechaError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email">
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" class="form-control" id="dni">
+                <div class="error-message" id="dniError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="url">URL:</label>
+                <input type="text" class="form-control" id="url">
+                <div class="error-message" id="urlError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="tarjetaCredito">Tarjeta de Crédito:</label>
+                <input type="text" class="form-control" id="tarjetaCredito">
+                <div class="error-message" id="tarjetaCreditoError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <script src="Validacion2.js"></script>
+</body>
+</html>
